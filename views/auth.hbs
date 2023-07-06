@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/auth.css">
+        
+        <title>Auth</title>
+    </head>
+
+    <body>
+
+        <div class="form">
+            <div class="form-toggle"></div>
+            
+            <div class="form-panel one">
+                <a class="home" href="/" ><i class="fa-regular fa-house"></i> Home</a>
+                <div class="form-header">
+                    <h1>Account Login</h1>
+                </div>
+                <div class="form-content">
+                    <form id="login" method="post" action="/auth/login">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="login-username" name="username" required="required"/>
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="login-password" name="password" required="required"/>
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-group">
+                            <button id="btn-login" type="submit">Log In</button>
+                        </div>
+                    
+                        <span id="login-message"></span>
+                    
+                    </form>
+                    <a href="/auth/signup" class="register-link">REGISTER ACCOUNT</a>
+                </div>
+            </div>
+            
+            <div class="form-panel two">
+                <div class="form-header">
+                    <h1>Register Account</h1>
+                </div>
+                <div class="form-content">
+                    <form id="signup" method="post" action="/auth/signup">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="signup-username" name="username" required="required"/>
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required="required"/>
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="signup-password" name="password" required="required"/>
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpassword">Confirm Password</label>
+                            <input type="password" id="cpassword" name="cpassword" required="required"/>
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-group">
+                            <button id="btn-reg" type="submit">Register</button>
+                        </div>
+                        <span id="signup-message"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/js/auth.js"></script>
+        <script src="/js/valid.js"></script>
+        
+    </body>
+
+</html>
