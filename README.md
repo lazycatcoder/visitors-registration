@@ -59,9 +59,8 @@
 
 3. Install **MongoDB** 
 
-Install **MongoDB** from official website: *https://www.mongodb.com/*
-
-After installation **MongoDB** run the *visitors_db* database on *localhost:27017*
+Install **MongoDB Compass** from official website: *https://www.mongodb.com/*  
+After installation **MongoDB Compass** create the *visitors_db* database on *localhost:27017*
 
 4. Install Dependencies
 
